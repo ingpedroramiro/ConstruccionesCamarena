@@ -1,0 +1,67 @@
+Facebook: https://www.flaticon.com/free-icon/facebook_733547?term=facebook&page=1&position=3&origin=search&related_id=733547
+
+whatsapp: https://www.flaticon.com/free-icon/whatsapp_2504957?term=whatsapp&page=1&position=12&origin=search&related_id=2504957
+
+correo: https://www.flaticon.com/free-icon/gmail_732200?term=mail&page=1&position=9&origin=search&related_id=732200
+
+<?php
+require 'vendor/autoload.php'; // Asegúrate de que Composer esté instalado y autoload.php esté disponible
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
+// Datos de conexión a la base de datos
+$servername = "localhost";
+$username = "tu_usuario";
+$password = "tu_contraseña";
+$dbname = "nombre_base_de_datos";
+
+// Crear una nueva instancia de Spreadsheet
+$spreadsheet = new Spreadsheet();
+$sheet = $spreadsheet->getActiveSheet();
+
+// Crear una conexión a la base de datos
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Consultar los datos de la base de datos
+$sql = "SELECT * FROM usuarios";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Agregar encabezados a la primera fila
+    $fields = $result->fetch_fields();
+    $col = 1;
+    foreach ($fields as $field) {
+        $sheet->setCellValueByColumnAndRow($col, 1, $field->name);
+        $col++;
+    }
+    
+    // Agregar los datos
+    $row = 2; // Comenzar en la segunda fila
+    while ($data = $result->fetch_assoc()) {
+        $col = 1;
+        foreach ($data as $value) {
+            $sheet->setCellValueByColumnAndRow($col, $row, $value);
+            $col++;
+        }
+        $row++;
+    }
+} else {
+    echo "0 resultados";
+}
+
+// Cerrar la conexión a la base de datos
+$conn->close();
+
+// Crear un objeto Writer y guardar el archivo Excel
+$writer = new Xlsx($spreadsheet);
+$filename = 'usuarios.xlsx';
+$writer->save($filename);
+
+echo "Archivo Excel guardado como $filename";
+?>

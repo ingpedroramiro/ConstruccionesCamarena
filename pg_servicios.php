@@ -9,21 +9,9 @@
 </head>
 
 <body>
-    <header>
-        <?php include 'navegacion.php'; ?>
-    </header>
-    <main>
-        <section class="contenido">
-            <?php include 'contenido_servicios.php'; ?>
-        </section>
-        <aside class="sidebar">
-            servicios
-            <?php include 'sidebar.php'; ?>
-        </aside>
-    </main>
-    <footer>
-        <?php include 'footer.php'; ?>
-    </footer>
+    <?php include 'navegacion.php'; ?>
+    <?php include 'contenido_servicios.php'; ?>
+    <?php include 'footer.php'; ?>
 </body>
-
+<script src="app.js"></script>
 </html>

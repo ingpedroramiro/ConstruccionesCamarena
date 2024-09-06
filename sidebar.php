@@ -1,1 +1,1 @@
-hola
+<p style="font-size: large; font-weight: bold; color:white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo optio consequatur nobis placeat, quis vitae aspernatur. Accusantium placeat sed, amet minus eveniet a, repellendus magnam ducimus dolor necessitatibus iste non.</p>

@@ -1,5 +1,6 @@
 
 <link rel="stylesheet" href="styles.css">
+<header id="main-header">
 <h1 style="text-align: center; font-size: 30px;">Construcciones Camarena</h1>
 <nav>
     <ul>
@@ -8,3 +9,4 @@
         <li><a class="" role="button" href="pg_contacto">Contacto</a></li>
     </ul>
 </nav>
+</header>

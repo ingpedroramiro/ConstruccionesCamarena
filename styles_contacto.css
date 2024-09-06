@@ -1,0 +1,94 @@
+  h2 {
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  #formulario-contacto {
+    flex: 2;
+    padding-bottom: 20px;
+    border-color: #333;
+    border: solid;
+  }
+  #informacion-contacto{
+    font-weight: bold;
+    padding: .6rem;
+    border-color: #333;
+    border: solid;
+    text-align: CENTER;
+    flex-direction: row;  
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  form label {
+    margin: 5px 0;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+.divcontacto{
+  display: flex;
+  flex-direction: row;
+}
+#fb-app{
+  visibility:hidden ;
+  display:none;
+}
+#fb-pc{
+  visibility: visible;
+  display: contents;
+  border: solid;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  main {
+      flex-direction: column;
+  }
+
+  .contenido,
+  .sidebar {
+      flex: 1;
+  }
+  
+  .divcontacto{
+    flex-direction: column;
+  }
+#fb-app{
+  visibility:visible ;
+  display: contents;
+}
+#fb-pc{
+  visibility: hidden;
+  display: none;
+}
+}

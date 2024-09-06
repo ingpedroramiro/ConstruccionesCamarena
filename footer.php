@@ -1,1 +1,1 @@
-<p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+<footer><p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p></footer>
