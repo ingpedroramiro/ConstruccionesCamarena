@@ -1,0 +1,391 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #222;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 64px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #ff9800;
+}
+
+.cta {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #e67e22;
+}
+
+/* Banner Principal */
+.hero {
+    background-image: url('src/img/FONDO.jpg');
+    /* Cambia a la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro para contraste */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    padding: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Sección de Servicios */
+.servicios {
+    padding: 30px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.servicio {
+    display: inline-block;
+    width: 80%;
+    margin: 10px;
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.servicio img {
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+
+.servicio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Sección de Proyectos */
+.proyectos {
+    padding: 50px 10%;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.proyecto {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proyecto img {
+    width: 100%;
+    height: auto;
+}
+
+.proyecto p {
+    padding: 15px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #555;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+/* Sección de Contacto */
+.contacto {
+    padding: 50px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contacto form {
+    display: inline-block;
+    max-width: 600px;
+    text-align: left;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto button:hover {
+    background-color: #e67e22;
+}
+
+/* Pie de Página */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 10%;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.menu-toggle {
+    display: none;
+    /* Oculto por defecto */
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Ajustar el margen de desplazamiento para evitar superposición del encabezado */
+#inicio,
+#servicios,
+#proyectos,
+#contacto {
+    scroll-margin-top: 80px;
+    /* Ajusta según la altura de tu encabezado */
+}
+
+/* glaleria */
+.galeria-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+
+.galeria-item img {
+    max-width: 512px;
+    height: 250px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    /* border-style: dashed; */
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#fb-app {
+    visibility: hidden;
+    display: none;
+}
+
+#fb-pc {
+    visibility: visible;
+    display: contents;
+    width: 32px;
+    height: 32px;
+}
+
+
+/* Estilos de navegación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        /* Ocultar menú por defecto en pantallas pequeñas */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        background-color: #222;
+        width: 80%;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav ul li a {
+        color: #fff;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+    }
+
+    /* Mostrar el botón de menú hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Mostrar menú desplegable cuando esté activo */
+    .nav ul.active {
+        display: flex;
+    }
+
+    .proyecto {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .servicio {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .cta {
+        margin-right: 20px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    #fb-app {
+        visibility: visible;
+        display: contents;
+    }
+
+    #fb-pc {
+        visibility: hidden;
+        display: none;
+    }
+    .hero-content p{
+        padding: 0px;
+        margin-top: -15px;
+    }
+    .hero-content h1{
+        padding: 0px;
+        margin-top: -20px;
+    }
+}

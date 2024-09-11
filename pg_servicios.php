@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Responsive</title>
     <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles_servicios.css">
 </head>
 
 <body>

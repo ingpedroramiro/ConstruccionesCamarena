@@ -13,7 +13,8 @@
         <h2>Información de Contacto</h2>
         <p><strong>Correo Electrónico:</strong> fcamarenagaray848@gmail.com</p>
         <p style="font-weight: bold;"><strong>Teléfono:</strong> +52 6691586453</p>
-        <p><strong>Dirección:</strong> Calle Ejemplo 123, Ciudad, País</p>
+        <p><strong>Dirección:</strong></p>
+        <p>Valle de México 14934, 82134 Mazatlán, Sin.</p>
         <h2>Redes Sociales</h2>
         <!-- facebook app -->
         <a href="fb://page/804460499724932" target="_blank" id="fb-app"><img src="src/img/facebook64x64.png" alt="Facebook"></a>
