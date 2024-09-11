@@ -5,9 +5,11 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
+
 body {
     line-height: 1.6;
     color: #333;
@@ -29,6 +31,7 @@ body {
 
 .logo img {
     max-height: 64px;
+    margin-left: -30px;
 }
 
 .nav ul {
@@ -124,9 +127,9 @@ body {
 
 .servicio {
     display: inline-block;
-    width: 80%;
-    margin: 10px;
-    padding: 20px;
+    width: 100%;
+    /* margin: 10px; */
+    /* padding: 20px; */
     /* border: 1px solid #ddd; */
     border-radius: 8px;
     background-color: #f9f9f9;
@@ -293,7 +296,7 @@ body {
 
 .galeria-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
 }
 
 #fb-app {
@@ -311,6 +314,92 @@ body {
 
 /* Estilos de navegación para pantallas pequeñas */
 @media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        /* Ocultar menú por defecto en pantallas pequeñas */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        background-color: #222;
+        width: 80%;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav ul li a {
+        color: #fff;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+    }
+
+    /* Mostrar el botón de menú hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Mostrar menú desplegable cuando esté activo */
+    .nav ul.active {
+        display: flex;
+    }
+
+    .proyecto {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .servicio {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .cta {
+        margin-right: 20px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    #fb-app {
+        visibility: visible;
+        display: contents;
+    }
+
+    #fb-pc {
+        visibility: hidden;
+        display: none;
+    }
+
+    .hero-content p {
+        padding: 0px;
+        margin-top: -15px;
+    }
+
+    .hero-content h1 {
+        padding: 0px;
+        margin-top: -20px;
+    }
+
+    .servicios {
+        padding: 0px;
+    }
+}
+@media (max-width: 950px) {
     .nav ul {
         display: none;
         /* Ocultar menú por defecto en pantallas pequeñas */
@@ -380,12 +469,22 @@ body {
         visibility: hidden;
         display: none;
     }
-    .hero-content p{
+
+    .hero-content p {
         padding: 0px;
         margin-top: -15px;
     }
-    .hero-content h1{
+
+    .hero-content h1 {
         padding: 0px;
         margin-top: -20px;
+    }
+
+    .servicios {
+        padding: 0px;
+    }
+    .galeria-grid{
+        place-content: center;
+        place-items: center;
     }
 }
